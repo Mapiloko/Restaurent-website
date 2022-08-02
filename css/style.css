@@ -490,6 +490,7 @@ h3,h4,h5,h6{
     margin: 15px 0;
 }
 .testi-item .ratings i{
+    margin-top: 15px;
     font-size: 16px;
     color: var(--main-color);
 }
