@@ -23,3 +23,16 @@ window.addEventListener("scroll", function(){
     else
     document.querySelector(".header").classList.remove ("sticky")
 });
+
+/*----------------menu tabs-------------------*/
+const menuTabs = document.querySelector(".menu-tabs")
+menuTabs.addEventListener("click", function(e){
+    if(e.target.classList.contains("menu-tab-item") && !e.target.classList.contains("active")){
+        const target = e.target.getAttribute("data-target");
+        menuTabs.querySelector(".active").classList.remove("active")
+        e.target.classList.add("active")
+        const menuSelection = document.querySelector(".menu-section")
+        menuSelection.querySelector(".menu-tab-content.active").classList.remove("active")
+        menuSelection.querySelector(target).classList.add("active")
+    }
+});
