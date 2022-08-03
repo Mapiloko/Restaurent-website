@@ -1,3 +1,13 @@
+window.addEventListener('load',function(){
+    // PAGE LOADER
+    document.querySelector(".page-loader").classList.add("fade-out")
+    setTimeout(function(){
+        document.querySelector(".page-loader").style.display = "none";
+    }, 1000 )
+    // ANIMATION ON SCROLL
+    AOS.init();
+})
+
 /*------------------toggle navbar-------------------- */
 const navToggler = document.querySelector(".nav-toggler")
 navToggler.addEventListener('click', toggleNav)
@@ -34,5 +44,9 @@ menuTabs.addEventListener("click", function(e){
         const menuSelection = document.querySelector(".menu-section")
         menuSelection.querySelector(".menu-tab-content.active").classList.remove("active")
         menuSelection.querySelector(target).classList.add("active")
+
+        // Animation on scroll
+        AOS.init();
+
     }
 });
